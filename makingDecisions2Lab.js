@@ -7,7 +7,7 @@ var arr = [10,20,30,40,50,60]
 */
 
 //Code Here
-
+let firstItem = arr[0]
 
 ////////// PROBLEM 2 //////////
 /*
@@ -15,6 +15,10 @@ var arr = [10,20,30,40,50,60]
 */
 
 //Code Here
+let lastItemRemoved = arr.pop()
+console.log(arr)
+
+
 
 ////////// PROBLEM 3 //////////
 
@@ -27,7 +31,9 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 */
 
 //Code Here
-
+for (let i = 0; i < family.length; i++){
+  console.log(family[i])
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -43,7 +49,12 @@ let evensArr = []
 
 //Code Here
 
-
+for (let i = 0; i <= nums.length; i++){
+  if (nums[i] % 2 === 0) {
+    evensArr.push(nums[i])
+  } 
+}
+console.log(evensArr)
 
 ////////// PROBLEM 5 //////////
 
@@ -56,7 +67,21 @@ var score = 74
 */
 
 //Code Here
-
+if (score >= 90){
+  console.log('A')
+}
+else if (score <= 89 && 80 <= score){
+  console.log('B')
+}
+else if (score <= 79 && 70 <= score){
+  console.log('C')
+}
+else if (score <= 69 && 60 <= score){
+  console.log('D')
+}
+else if (60 > score){
+  console.log('F')
+}
 
 ////////// Intermediate Problems //////////
 
@@ -71,14 +96,19 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 */
 
 //Code Here
-
-
-////////// PROBLEM 7 //////////
+let someNum = myFavoriteNumbers[5]
 
 // Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that. 
 // Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
 
 //Code Here
+for (let i = 0; i < myFavoriteNumbers.length; i++)
+if (myFavoriteNumbers < 7) {
+  console.log('There are not elements in this array')
+} else {
+  someNum = myFavoriteNumbers[6]
+}
+console.log(someNum)
 
 
 ////////// PROBLEM 8 //////////
@@ -90,8 +120,11 @@ var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
-
-
+for (let i = 0; i <= listOfNumbers.length; i++) {
+  if (listOfNumbers[i] % 3 === 0) {
+    console.log(`${listOfNumbers[i]} is divisible by 3`)
+  }
+}
 ////////// PROBLEM 9 //////////
 // Do not edit the code below.
 var letters = ['A', 'B', 'C', 'D', 'E'];
@@ -102,7 +135,9 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+for (let i = letters.length - 1; i >= 0; i--) {
+  console.log(letters[i])
+}
 
 ////////// Advanced Problems //////////
 
@@ -124,8 +159,26 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
-
-
+switch(letterGrade) {
+  case "A":
+    console.log('"The student is doing excellently."')
+}
+switch(letterGrade) {
+  case "B":
+    console.log('"The student is doing well."')
+}
+switch(letterGrade) {
+  case "C":
+    console.log('"The student is doing alright."')
+}
+switch(letterGrade) {
+  case "D":
+    console.log('"The student is not doing very well."')
+}
+switch(letterGrade) {
+  case "F":
+    console.log('"The student is failing."')
+}
 
 ////////// PROBLEM 11 //////////
 /* The famous FizzBuzz, Devmountain style!
